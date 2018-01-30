@@ -34,7 +34,6 @@ public class SequenceActivity extends AppCompatActivity {
                 SequenceActivity.this.finish();
             }
         });
-
         start.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
