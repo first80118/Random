@@ -55,11 +55,6 @@ public class LotteryActivity extends AppCompatActivity {
                             }
                         }).show();
 
-
-
-
-
-
             }
         });
     }
