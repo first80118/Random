@@ -13,21 +13,16 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static android.R.layout.simple_list_item_1;
+
 public class SequenceActivity extends AppCompatActivity {
-
-
-
-
+    List<String> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sequence);
         Button back = (Button)findViewById(R.id.button17);
         Button start = (Button)findViewById(R.id.button18);
-
-
-
-
 
 
         back.setOnClickListener(new Button.OnClickListener() {
@@ -46,10 +41,10 @@ public class SequenceActivity extends AppCompatActivity {
                 EditText ed6 =(EditText)findViewById(R.id.editText6);
                 String input = ed6.getText().toString();
                 String[] strArray = input.split("\n");
-                List<String> list = Arrays.asList(strArray);
+                list = Arrays.asList(strArray);
                 Collections.shuffle(list);
                 ListView listview = (ListView) findViewById(R.id.listview1);
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(SequenceActivity.this, simple_list_item_1,list);
                 listview.setAdapter(adapter);
             }
         });
