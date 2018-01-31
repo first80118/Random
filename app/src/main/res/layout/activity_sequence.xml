@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.first80118.random.SequenceActivity">
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -24,9 +25,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
         android:text="back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listview1" />
 
     <Button
         android:id="@+id/button18"
@@ -34,31 +37,43 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="64dp"
+        android:layout_marginTop="8dp"
         android:text="start"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listview1" />
 
     <EditText
         android:id="@+id/editText6"
         android:layout_width="0dp"
-        android:layout_height="142dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="172dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/listview1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <ListView
         android:id="@+id/listview1"
         android:layout_width="368dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button18"
+        android:layout_height="138dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText6"
         tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="請換行輸入項目"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </android.support.constraint.ConstraintLayout>

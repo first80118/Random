@@ -1,10 +1,18 @@
 package com.first80118.random;
 
+import android.animation.IntArrayEvaluator;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static android.R.layout.simple_list_item_1;
 
 public class NumberResaultActivity extends AppCompatActivity {
 
@@ -24,6 +32,15 @@ public class NumberResaultActivity extends AppCompatActivity {
 
             }
         });
+
+
+        Bundle bundle = getIntent().getExtras();
+        int[] array = bundle.getIntArray("number");
+
+        List<int[]> array1 = Arrays.asList(array);
+        ListView listView2 = (ListView) findViewById(R.id.listView2);
+        ArrayAdapter<int[]> adapter = new ArrayAdapter<>(this,simple_list_item_1,array1);
+        listView2.setAdapter(adapter);
 
     }
 
