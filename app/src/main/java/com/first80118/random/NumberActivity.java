@@ -75,12 +75,23 @@ public class NumberActivity extends AppCompatActivity {
                 }
 
 
+
                 List<Integer> array1 = new ArrayList(Arrays.asList(array));
+                // ListView listview = (ListView) findViewById(R.id.listView4);
+                //ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(NumberActivity.this, simple_list_item_1,array1);
+                //listview.setAdapter(adapter);
+
+
+
 
 
 
                 Intent intent = new Intent();
                 intent.setClass(NumberActivity.this,NumberResaultActivity.class);
+                intent.putExtra("max", Integer.parseInt(ed3.getText().toString()));
+                intent.putExtra("min", Integer.parseInt(ed.getText().toString()));
+                intent.putExtra("num", Integer.parseInt(ed2.getText().toString()));
+
                 intent.putIntegerArrayListExtra("number", (ArrayList<Integer>) array1);
                 startActivity(intent);
                 NumberActivity.this.finish();
