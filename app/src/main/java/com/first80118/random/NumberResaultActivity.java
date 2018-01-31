@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -34,13 +35,12 @@ public class NumberResaultActivity extends AppCompatActivity {
         });
 
 
-        Bundle bundle = getIntent().getExtras();
-        int[] array = bundle.getIntArray("number");
+        ArrayList<Integer> array1 = (ArrayList<Integer>) getIntent().getIntegerArrayListExtra("number");
 
-        List<int[]> array1 = Arrays.asList(array);
-        ListView listView2 = (ListView) findViewById(R.id.listView2);
-        ArrayAdapter<int[]> adapter = new ArrayAdapter<>(this,simple_list_item_1,array1);
-        listView2.setAdapter(adapter);
+
+        ListView listview = (ListView) findViewById(R.id.listView2);
+        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(NumberResaultActivity.this, simple_list_item_1,array1);
+        listview.setAdapter(adapter);
 
     }
 

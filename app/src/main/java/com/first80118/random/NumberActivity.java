@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -73,21 +74,16 @@ public class NumberActivity extends AppCompatActivity {
                     }
                 }
 
-                List<Integer> array1 = Arrays.asList(array);
-                ListView listview = (ListView) findViewById(R.id.listView4);
-                ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(NumberActivity.this, simple_list_item_1,array1);
-                listview.setAdapter(adapter);
+
+                List<Integer> array1 = new ArrayList(Arrays.asList(array));
 
 
-                //Bundle bundle = new Bundle();
-                //bundle.putIntArray("number", array);
 
-                /*
                 Intent intent = new Intent();
                 intent.setClass(NumberActivity.this,NumberResaultActivity.class);
+                intent.putIntegerArrayListExtra("number", (ArrayList<Integer>) array1);
                 startActivity(intent);
                 NumberActivity.this.finish();
-                        */
 
             }
         });

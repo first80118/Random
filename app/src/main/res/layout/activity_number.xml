@@ -24,25 +24,32 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="幾組號碼:"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintHorizontal_bias="0.338"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="0.424" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="139dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="36dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/button10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="0.411" />
 
     <Button
         android:id="@+id/button9"
@@ -51,12 +58,10 @@
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="20dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="8dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listView4" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button10"
@@ -64,18 +69,16 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginTop="8dp"
         android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listView4" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="60dp"
         android:layout_height="45dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="104dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,8 +88,8 @@
         android:id="@+id/editText3"
         android:layout_width="60dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="104dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,24 +101,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="104dp"
         android:text="~"
         android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/editText3"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toEndOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <ListView
-        android:id="@+id/listView4"
-        android:layout_width="368dp"
-        android:layout_height="169dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
 </android.support.constraint.ConstraintLayout>
