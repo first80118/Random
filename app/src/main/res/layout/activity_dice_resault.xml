@@ -15,6 +15,7 @@
         android:layout_marginTop="24dp"
         android:text="結果"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,33 +27,15 @@
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="64dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
         android:text="restart"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.693"
-        app:layout_constraintStart_toEndOf="@+id/button8" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="60dp"
-        android:text="加總:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/button15"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button16"
-        app:layout_constraintStart_toEndOf="@+id/textView4" />
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
     <Button
         android:id="@+id/button15"
@@ -60,11 +43,16 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
         android:text="Back"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -79,10 +67,20 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:srcCompat="@drawable/aa3"
+                tools:layout_editor_absoluteX="171dp"
+                tools:layout_editor_absoluteY="114dp" />
+
+            <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/ic_launcher"
+                android:visibility="visible"
+                app:srcCompat="@drawable/aa2"
                 tools:layout_editor_absoluteX="275dp"
                 tools:layout_editor_absoluteY="114dp" />
 
@@ -90,17 +88,11 @@
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/ic_launcher"
+                android:visibility="visible"
+                app:srcCompat="@drawable/aa1"
                 tools:layout_editor_absoluteX="64dp"
                 tools:layout_editor_absoluteY="114dp" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/ic_launcher"
-                tools:layout_editor_absoluteX="171dp"
-                tools:layout_editor_absoluteY="114dp" />
         </TableRow>
 
         <TableRow
@@ -108,28 +100,32 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/imageView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/ic_launcher"
-                tools:layout_editor_absoluteX="275dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/aa6"
+                tools:layout_editor_absoluteX="64dp"
                 tools:layout_editor_absoluteY="171dp" />
 
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/ic_launcher"
+                android:visibility="visible"
+                app:srcCompat="@drawable/aa5"
                 tools:layout_editor_absoluteX="168dp"
                 tools:layout_editor_absoluteY="171dp" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imageView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/ic_launcher"
-                tools:layout_editor_absoluteX="64dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/aa4"
+                tools:layout_editor_absoluteX="275dp"
                 tools:layout_editor_absoluteY="171dp" />
+
         </TableRow>
 
     </TableLayout>
