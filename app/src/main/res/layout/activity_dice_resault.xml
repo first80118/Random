@@ -67,7 +67,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="invisible"
@@ -76,7 +76,7 @@
                 tools:layout_editor_absoluteY="114dp" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imageView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="invisible"
@@ -85,7 +85,7 @@
                 tools:layout_editor_absoluteY="114dp" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imageView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="invisible"
@@ -100,7 +100,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imageView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="invisible"
@@ -109,7 +109,7 @@
                 tools:layout_editor_absoluteY="171dp" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/imageView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="invisible"
@@ -118,7 +118,7 @@
                 tools:layout_editor_absoluteY="171dp" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/imageView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="invisible"
