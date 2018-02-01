@@ -70,7 +70,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
+                android:visibility="invisible"
                 app:srcCompat="@drawable/aa3"
                 tools:layout_editor_absoluteX="171dp"
                 tools:layout_editor_absoluteY="114dp" />
@@ -79,7 +79,7 @@
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
+                android:visibility="invisible"
                 app:srcCompat="@drawable/aa2"
                 tools:layout_editor_absoluteX="275dp"
                 tools:layout_editor_absoluteY="114dp" />
@@ -88,7 +88,7 @@
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
+                android:visibility="invisible"
                 app:srcCompat="@drawable/aa1"
                 tools:layout_editor_absoluteX="64dp"
                 tools:layout_editor_absoluteY="114dp" />
@@ -103,7 +103,7 @@
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
+                android:visibility="invisible"
                 app:srcCompat="@drawable/aa6"
                 tools:layout_editor_absoluteX="64dp"
                 tools:layout_editor_absoluteY="171dp" />
@@ -112,7 +112,7 @@
                 android:id="@+id/imageView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
+                android:visibility="invisible"
                 app:srcCompat="@drawable/aa5"
                 tools:layout_editor_absoluteX="168dp"
                 tools:layout_editor_absoluteY="171dp" />
@@ -121,7 +121,7 @@
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
+                android:visibility="invisible"
                 app:srcCompat="@drawable/aa4"
                 tools:layout_editor_absoluteX="275dp"
                 tools:layout_editor_absoluteY="171dp" />

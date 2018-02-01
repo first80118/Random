@@ -23,31 +23,59 @@ public class DiceResaultActivity extends AppCompatActivity {
         final ImageView image4 = (ImageView)findViewById(R.id.imageView4);
         final ImageView image5 = (ImageView)findViewById(R.id.imageView5);
         final ImageView image6 = (ImageView)findViewById(R.id.imageView6);
-
+        Bundle bundle = this.getIntent().getExtras();
+        final int s =bundle.getInt("s");
         final Random rand = new Random(6);
         final int[] ImageArray = new int[]{R.drawable.aa1,R.drawable.aa2,R.drawable.aa3,R.drawable.aa4,R.drawable.aa5,R.drawable.aa6};
+        final ImageView[] image = new ImageView[]{image1,image2,image3,image4,image5,image6};
 
-
+        if (s==0)
+        {
+            for(int i=0;i<=s;i++) {
+                image[i].setVisibility(View.VISIBLE);
+            }
+        }
+        if (s==1)
+        {
+            for(int i=0;i<=s;i++) {
+                image[i].setVisibility(View.VISIBLE);
+            }
+        }
+        if (s==2)
+        {
+            for(int i=0;i<=s;i++) {
+                image[i].setVisibility(View.VISIBLE);
+            }
+        }
+        if (s==3)
+        {
+            for(int i=0;i<=s;i++) {
+                image[i].setVisibility(View.VISIBLE);
+            }
+        }
+        if (s==4)
+        {
+            for(int i=0;i<=s;i++) {
+                image[i].setVisibility(View.VISIBLE);
+            }
+        }
+        if (s==5)
+        {
+            for(int i=0;i<=s;i++) {
+                image[i].setVisibility(View.VISIBLE);
+            }
+        }
 
         restart.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                int num1,num2,num3,num4,num5,num6;
-                num1= rand.nextInt(6);
-                num2= rand.nextInt(6);
-                num3= rand.nextInt(6);
-                num4= rand.nextInt(6);
-                num5= rand.nextInt(6);
-                num6= rand.nextInt(6);
 
-                image1.setImageDrawable(getResources().getDrawable(ImageArray[num1]));
-                image2.setImageDrawable(getResources().getDrawable(ImageArray[num2]));
-                image3.setImageDrawable(getResources().getDrawable(ImageArray[num3]));
-                image4.setImageDrawable(getResources().getDrawable(ImageArray[num4]));
-                image5.setImageDrawable(getResources().getDrawable(ImageArray[num5]));
-                image6.setImageDrawable(getResources().getDrawable(ImageArray[num6]));
-
+                int num = rand.nextInt(6);
+                for(int i=0;i<=5;i++) {
+                    num= rand.nextInt(6);
+                    image[i].setImageDrawable(getResources().getDrawable(ImageArray[num]));
+                }
 
 
             }

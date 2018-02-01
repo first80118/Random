@@ -9,13 +9,20 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 public class DiceActivity extends AppCompatActivity {
-
+    Spinner sp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dice);
         Button back = (Button)findViewById(R.id.button13);
         Button start = (Button)findViewById(R.id.button14);
+        sp = findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> lunchList = ArrayAdapter.createFromResource(DiceActivity.this,
+                R.array.lunch,
+                android.R.layout.simple_spinner_dropdown_item);
+        sp.setAdapter(lunchList);
+        int s = sp.getSelectedItemPosition();
+
         back.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,16 +38,13 @@ public class DiceActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent();
                 intent.setClass(DiceActivity.this,DiceResaultActivity.class);
+                intent.putExtra("s",sp.getSelectedItemPosition());
                 startActivity(intent);
                 DiceActivity.this.finish();
             }
         });
 
-        Spinner spinner = (Spinner)findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> lunchList = ArrayAdapter.createFromResource(DiceActivity.this,
-                R.array.lunch,
-                android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(lunchList);
+
     }
 
 
