@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -41,13 +42,21 @@ public class SequenceActivity extends AppCompatActivity {
             public void onClick(View view) {
                 EditText ed6 =(EditText)findViewById(R.id.editText6);
                 String input = ed6.getText().toString();
-                tv.setVisibility(View.VISIBLE);
                 String[] strArray = input.split("\n");
-                list = Arrays.asList(strArray);
-                Collections.shuffle(list);
-                ListView listview = (ListView) findViewById(R.id.listview1);
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(SequenceActivity.this, simple_list_item_1,list);
-                listview.setAdapter(adapter);
+                int item=strArray.length;
+                if (item > 1)
+                {
+                    tv.setVisibility(View.VISIBLE);
+                    list = Arrays.asList(strArray);
+                    Collections.shuffle(list);
+                    ListView listview = (ListView) findViewById(R.id.listview1);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(SequenceActivity.this, simple_list_item_1, list);
+                    listview.setAdapter(adapter);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"請輸入兩個以上選項", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

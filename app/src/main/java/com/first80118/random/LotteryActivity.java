@@ -36,24 +36,27 @@ public class LotteryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //Intent intent = new Intent();
-                //intent.setClass(LotteryActivity.this,LotteryResaultActivity.class);
-                //startActivity(intent);
-                //LotteryActivity.this.finish();
+
                 String input = ed.getText().toString();
                 String[] item = input.split("\n");
+                try
+                {
+                    int a =item.length;
+                    int i = (int)(Math.random()*(a+1));
+                    new AlertDialog.Builder(LotteryActivity.this)
+                            .setTitle("抽中")
+                            .setMessage(item[i])
+                            .setPositiveButton("確定", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
 
-                int a =item.length;
-                int i = (int)(Math.random()*(a+1));
-                new AlertDialog.Builder(LotteryActivity.this)
-                        .setTitle("抽中")
-                        .setMessage(item[i])
-                        .setPositiveButton("確定", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        }).show();
+                                }
+                            }).show();
+                }
+                catch(Exception err)
+                {
+                    Toast.makeText(getApplicationContext(),"請輸入兩個以上選項", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

@@ -79,18 +79,11 @@ public class NumberResaultActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
             }
         });
 
 
         ArrayList<Integer> array1 = (ArrayList<Integer>) getIntent().getIntegerArrayListExtra("number");
-
-
         ListView listview = (ListView) findViewById(R.id.listView2);
         ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(NumberResaultActivity.this, simple_list_item_1,array1);
         listview.setAdapter(adapter);

@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -48,53 +49,56 @@ public class NumberActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                int max,min,num;
-                max=Integer.parseInt(ed3.getText().toString());
-                min=Integer.parseInt(ed.getText().toString());
-                num=Integer.parseInt(ed2.getText().toString());
+                try
+                {
+                    int max, min, num;
+                    max = Integer.parseInt(ed3.getText().toString());
+                    min = Integer.parseInt(ed.getText().toString());
+                    num = Integer.parseInt(ed2.getText().toString());
+                    Random random = new Random();
+                    if(num < (max-min)) {
+                        array = new Integer[num];
+                        for (int a = 0; a < num; ++a) {
+                            int i = 0;
+                            pick:
+                            while (i == 0) {
+                                i = random.ints(min, (max + 1)).findFirst().getAsInt();
 
-                Random random = new Random();
-
-                array = new Integer[num];
-                for (int a = 0; a < num; ++a) {
-                    int i = 0;
-                    pick:
-                    while (i == 0) {
-                        i = random.ints(min, (max + 1)).findFirst().getAsInt();
-
-                        for (int b = 0; b < a; ++b) {
-                            if (array[b] == i) {
-                                i = 0;
-                                continue pick;
+                                for (int b = 0; b < a; ++b) {
+                                    if (array[b] == i) {
+                                        i = 0;
+                                        continue pick;
+                                    }
+                                }
+                                array[a] = i;
                             }
                         }
-                        array[a] = i;
+                        List<Integer> array1 = new ArrayList(Arrays.asList(array));
 
 
+                        Intent intent = new Intent();
+                        intent.setClass(NumberActivity.this, NumberResaultActivity.class);
+                        intent.putExtra("max", Integer.parseInt(ed3.getText().toString()));
+                        intent.putExtra("min", Integer.parseInt(ed.getText().toString()));
+                        intent.putExtra("num", Integer.parseInt(ed2.getText().toString()));
+
+                        intent.putIntegerArrayListExtra("number", (ArrayList<Integer>) array1);
+                        startActivity(intent);
+                        NumberActivity.this.finish();
                     }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(),"組數不可超過設定範圍", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                catch(Exception err)
+                {
+                    Toast.makeText(getApplicationContext(),"請輸入範圍及組數", Toast.LENGTH_SHORT).show();
                 }
 
 
 
-                List<Integer> array1 = new ArrayList(Arrays.asList(array));
-                // ListView listview = (ListView) findViewById(R.id.listView4);
-                //ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(NumberActivity.this, simple_list_item_1,array1);
-                //listview.setAdapter(adapter);
 
-
-
-
-
-
-                Intent intent = new Intent();
-                intent.setClass(NumberActivity.this,NumberResaultActivity.class);
-                intent.putExtra("max", Integer.parseInt(ed3.getText().toString()));
-                intent.putExtra("min", Integer.parseInt(ed.getText().toString()));
-                intent.putExtra("num", Integer.parseInt(ed2.getText().toString()));
-
-                intent.putIntegerArrayListExtra("number", (ArrayList<Integer>) array1);
-                startActivity(intent);
-                NumberActivity.this.finish();
 
             }
         });
