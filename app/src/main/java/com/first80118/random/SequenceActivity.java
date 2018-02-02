@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -23,7 +25,7 @@ public class SequenceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sequence);
         Button back = (Button)findViewById(R.id.button17);
         Button start = (Button)findViewById(R.id.button18);
-
+        final TextView tv =(TextView)findViewById(R.id.textView7);
 
         back.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -39,6 +41,7 @@ public class SequenceActivity extends AppCompatActivity {
             public void onClick(View view) {
                 EditText ed6 =(EditText)findViewById(R.id.editText6);
                 String input = ed6.getText().toString();
+                tv.setVisibility(View.VISIBLE);
                 String[] strArray = input.split("\n");
                 list = Arrays.asList(strArray);
                 Collections.shuffle(list);
